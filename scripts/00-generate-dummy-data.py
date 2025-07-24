@@ -99,9 +99,9 @@ def main():
     """Main function with configuration options."""
     
     # Configuration
-    NUM_FILES = 1
+    NUM_FILES = 400
     FILE_SIZE_MB = 120
-    OUTPUT_DIR = 'single_dummy_data'
+    OUTPUT_DIR = 'batch_dummy_data_large'
     
     # Optional: Ask user for confirmation due to large file size
     total_gb = (NUM_FILES * FILE_SIZE_MB) / 1024
