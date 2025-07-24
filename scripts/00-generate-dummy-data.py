@@ -100,8 +100,8 @@ def main():
     
     # Configuration
     NUM_FILES = 400
-    FILE_SIZE_MB = 120
-    OUTPUT_DIR = 'batch_dummy_data_large'
+    FILE_SIZE_MB = 1
+    OUTPUT_DIR = 'batch_dummy_data_small'
     
     # Optional: Ask user for confirmation due to large file size
     total_gb = (NUM_FILES * FILE_SIZE_MB) / 1024

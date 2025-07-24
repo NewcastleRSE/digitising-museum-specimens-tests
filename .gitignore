@@ -2,5 +2,6 @@ env/
 logs/
 single_dummy_data_large/
 batch_dummy_data_large/
+batch_dummy_data_small/
 
 *.env

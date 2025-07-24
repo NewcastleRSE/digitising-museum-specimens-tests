@@ -105,3 +105,19 @@ The test will display a success message if it completes successfully. The succes
 
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
+
+#### 5. Test batch small files upload
+
+This test will attempt to programatically upload a single large file (~120MB) to the storage account container. It will confirm that there are no impediments to upload single files of a size similar to (or larger than) what we expect an uncompressed TIFF file from a mid- to high-end DSLR to produce.
+
+##### Run the test
+`python3 ./scripts/02-file-upload.py --folder ./single_dummy_data_large/dummy_file_001.txt --container upload-tests`
+
+##### Output
+Logs will be displayed on the console and saved to `logs/file_upload_*.log`
+
+##### Success
+The test will display a success message if it completes successfully. The successful completion of this test confirms that large single files can be uploaded through the network. The time it takes to upload a file will also allow us to investigate whether single file upload or (daily) batch uploads are a better approach.
+
+##### Failure
+A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
