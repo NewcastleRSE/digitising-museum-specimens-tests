@@ -74,5 +74,18 @@ The test will display a success message if it completes successfully. The succes
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
 
+#### 3. Test file extension upload
 
+This test will attempt to programatically upload three small files (~10MB) to the storage account container. It will confirm that there are no impediments to uploading files of the extensions that are likely to be needed: `.csv` or `.json` for structured metadata, and `.tiff` for uncompressed (or losslessly compressed) image files.
 
+##### Run the test
+`python3 ./scripts/02-file-upload.py --folder ./single_dummy_data_small --container upload-tests --extensions csv json tiff`
+
+##### Output
+Logs will be displayed on the console and saved to `logs/file_upload_*.log`
+
+##### Success
+The test will display a success message if it completes successfully. The successful completion of this test confirms that there are no impediments to upload files of the type the digitisation workflow is likely to use the Azure storage account either on the network or on the machine. The digitisation workflow should be able to upload the images automatically.
+
+##### Failure
+A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
