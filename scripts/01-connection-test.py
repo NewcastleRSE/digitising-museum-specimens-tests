@@ -16,6 +16,7 @@ import sys
 from datetime import datetime
 from azure.storage.blob import BlobServiceClient
 from azure.core.exceptions import AzureError, ClientAuthenticationError, ResourceNotFoundError
+from pathlib import Path
 import logging
 
 # Load environment variables from .env file
@@ -30,8 +31,16 @@ except Exception as e:
     print(f"⚠ Could not load .env file: {e}")
     print("⚠ Falling back to system environment variables only")
 
+# Create logs directory if it doesn't exist
+logs_dir = Path("logs")
+logs_dir.mkdir(exist_ok=True)
+
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_filename = logs_dir / f'connection_test_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[
+    logging.FileHandler(log_filename),
+    logging.StreamHandler(sys.stdout)
+])
 logger = logging.getLogger(__name__)
 
 class AzureStorageConnectionTester:
