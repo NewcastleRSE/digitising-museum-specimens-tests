@@ -106,7 +106,7 @@ The test will display a success message if it completes successfully. The succes
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
 
-#### 5. Test batch small files upload
+#### 5. Test small files batch upload
 
 This test will attempt to programatically upload a batch of small files (~0.39 GB total) to the storage account container. It will confirm that there are no impediments to the batch upload of files of the number we expect a single digitisation station to produce in a day.
 
@@ -121,3 +121,19 @@ The test will display a success message if it completes successfully. The succes
 
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include a (daily) batched upload step from this machine or network. If the previous tests have been successful, the recommendation is that the digitisation workflow includes an automated (or user started) upload step per item.
+
+#### 6. Test large files batch upload
+
+This test will attempt to programatically upload a batch of large files (~48 GB total) to the storage account container. It will confirm that there are no impediments to the batch upload of files of the number and the size we expect a single digitisation station to produce in a day. It will ascertain whether a batched (overnight) upload of all the data produced the previous day is a feasible option in defining the digital workflow.
+
+##### Run the test
+`python3 ./scripts/02-file-upload.py --folder ./batch_dummy_data_large/ --container upload-tests`
+
+##### Output
+Logs will be displayed on the console and saved to `logs/file_upload_*.log`
+
+##### Success
+The test will display a success message if it completes successfully. The successful completion of this test confirms that batch upload of c. 400 large files can be uploaded through the network without disturbance and in a usable timeframe. It will establish if batch uploading of daily digitisation is possible for one station.
+
+##### Failure
+A failed test means that the digitisation workflow might not be able to include a (daily) batched upload step from this machine or network. If the previous tests have been successful, the recommendation is that the digitisation workflow includes an automated (or user started) upload step per item or a smaller (hourly?) batch upload step.
