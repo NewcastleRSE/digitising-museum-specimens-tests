@@ -16,6 +16,7 @@ import os
 import sys
 import argparse
 import logging
+import time
 from pathlib import Path
 from typing import List, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -61,6 +62,7 @@ class AzureBlobUploader:
         self.blob_service_client = BlobServiceClient.from_connection_string(connection_string)
         self.uploaded_files = []
         self.failed_files = []
+        self.upload_times = []  # Track individual upload times
         
     def create_container_if_not_exists(self) -> bool:
         """Create container if it doesn't exist."""
@@ -97,6 +99,8 @@ class AzureBlobUploader:
         if blob_name is None:
             blob_name = file_path.name
             
+        start_time = time.time()  # Start timing the upload
+        
         try:
             # Get blob client
             blob_client = self.blob_service_client.get_blob_client(
@@ -108,9 +112,17 @@ class AzureBlobUploader:
             with open(file_path, "rb") as data:
                 blob_client.upload_blob(data, overwrite=overwrite)
                 
+            upload_time = time.time() - start_time  # Calculate upload time
             file_size = file_path.stat().st_size
-            logger.info(f"✓ Uploaded: {file_path.name} ({file_size:,} bytes) -> {blob_name}")
+            
+            # Calculate upload speed
+            upload_speed_mbps = (file_size / (1024 * 1024)) / upload_time if upload_time > 0 else 0
+            
+            logger.info(f"✓ Uploaded: {file_path.name} ({file_size:,} bytes) -> {blob_name} "
+                       f"in {upload_time:.2f}s ({upload_speed_mbps:.2f} MB/s)")
+            
             self.uploaded_files.append(str(file_path))
+            self.upload_times.append(upload_time)
             return True
             
         except AzureError as e:
@@ -178,6 +190,9 @@ class AzureBlobUploader:
         
         logger.info(f"Found {len(files_to_upload)} files to upload")
         
+        # Start timing the entire upload process
+        total_start_time = time.time()
+        
         # Create container if needed
         if not self.create_container_if_not_exists():
             logger.error("Failed to access/create container")
@@ -204,6 +219,12 @@ class AzureBlobUploader:
                 if future.result():
                     successful_uploads += 1
         
+        # Calculate total elapsed time
+        total_elapsed_time = time.time() - total_start_time
+        
+        # Calculate average upload time per file
+        avg_upload_time = sum(self.upload_times) / len(self.upload_times) if self.upload_times else 0
+        
         # Summary
         total_files = len(files_to_upload)
         failed_uploads = total_files - successful_uploads
@@ -213,6 +234,10 @@ class AzureBlobUploader:
         logger.info(f"Total files: {total_files}")
         logger.info(f"Successful: {successful_uploads}")
         logger.info(f"Failed: {failed_uploads}")
+        logger.info(f"Total elapsed time: {total_elapsed_time:.2f} seconds ({total_elapsed_time/60:.2f} minutes)")
+        logger.info(f"Average upload time per file: {avg_upload_time:.2f} seconds")
+        if successful_uploads > 0:
+            logger.info(f"Throughput: {successful_uploads/total_elapsed_time:.2f} files/second")
         logger.info(f"Container: {self.container_name}")
         logger.info(f"{'='*50}")
         
@@ -224,7 +249,10 @@ class AzureBlobUploader:
             "successful": successful_uploads,
             "failed": failed_uploads,
             "uploaded_files": self.uploaded_files,
-            "failed_files": self.failed_files
+            "failed_files": self.failed_files,
+            "total_elapsed_time": total_elapsed_time,
+            "average_upload_time": avg_upload_time,
+            "throughput": successful_uploads/total_elapsed_time if total_elapsed_time > 0 else 0
         }
 
 def main():
