@@ -1,0 +1,57 @@
+2025-07-24 11:05:53,686 - INFO - Found 1 files to upload
+2025-07-24 11:05:53,689 - INFO - Request URL: 'https://digimuscoltest.blob.core.windows.net/upload-tests?restype=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.26.0 Python/3.12.3 (Linux-6.8.0-63-generic-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c8be7c38-6875-11f0-86be-f4a80d98779a'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-07-24 11:05:53,866 - INFO - Response status: 409
+Response headers:
+    'Content-Length': '230'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'fa30c141-d01e-0043-7582-fc3d41000000'
+    'x-ms-client-request-id': 'c8be7c38-6875-11f0-86be-f4a80d98779a'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'ContainerAlreadyExists'
+    'Date': 'Thu, 24 Jul 2025 10:05:53 GMT'
+2025-07-24 11:05:53,867 - INFO - Container 'upload-tests' already exists
+2025-07-24 11:05:53,868 - INFO - Request URL: 'https://digimuscoltest.blob.core.windows.net/upload-tests/dummy_file_small.txt'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1048576'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.26.0 Python/3.12.3 (Linux-6.8.0-63-generic-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c8da1cdb-6875-11f0-98ae-f4a80d98779a'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-07-24 11:05:54,187 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Thu, 24 Jul 2025 10:05:54 GMT'
+    'ETag': '"0x8DDCA99AD3D95FE"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'fa30c15f-d01e-0043-1082-fc3d41000000'
+    'x-ms-client-request-id': 'c8da1cdb-6875-11f0-98ae-f4a80d98779a'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 24 Jul 2025 10:05:53 GMT'
+2025-07-24 11:05:54,187 - INFO - ✓ Uploaded: dummy_file_small.txt (1,048,576 bytes) -> dummy_file_small.txt
+2025-07-24 11:05:54,187 - INFO - 
+==================================================
+2025-07-24 11:05:54,187 - INFO - Upload Summary:
+2025-07-24 11:05:54,187 - INFO - Total files: 1
+2025-07-24 11:05:54,188 - INFO - Successful: 1
+2025-07-24 11:05:54,188 - INFO - Failed: 0
+2025-07-24 11:05:54,188 - INFO - Container: upload-tests
+2025-07-24 11:05:54,188 - INFO - ==================================================
