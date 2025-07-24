@@ -138,7 +138,7 @@ The test will display a success message if it completes successfully. The succes
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include a (daily) batched upload step from this machine or network. If the previous tests have been successful, the recommendation is that the digitisation workflow includes an automated (or user started) upload step per item or a smaller (hourly?) batch upload step.
 
-### Results for `eduroam` in the Catalyst building
+### Results for wired connection in the Catalyst building
 - [1. Test connection with Azure storage](#1-test-connection-with-azure-storage) ✅
 - [2. Test single small file upload](#2-test-single-small-file-upload) ✅
 - [3. Test file extension upload](#3-test-file-extension-upload) ✅
@@ -182,3 +182,41 @@ A failed test means that the digitisation workflow might not be able to include 
 2025-07-24 14:07:01,321 - INFO - Container: upload-tests
 2025-07-24 14:07:01,321 - INFO - ==================================================
 ```
+
+### Results for `newcastle-university` wifi connection in the Catalyst building
+- [1. Test connection with Azure storage](#1-test-connection-with-azure-storage) ✅
+- [2. Test single small file upload](#2-test-single-small-file-upload) ✅
+- [3. Test file extension upload](#3-test-file-extension-upload) ✅
+- [4. Test single large file upload](#4-test-single-large-file-upload) ✅
+```
+2025-07-24 14:24:51,585 - INFO - ✓ Uploaded: dummy_file_001.txt (125,829,120 bytes) -> dummy_file_001.txt in 14.41s (8.33 MB/s)
+2025-07-24 14:24:51,585 - INFO - 
+==================================================
+2025-07-24 14:24:51,585 - INFO - Upload Summary:
+2025-07-24 14:24:51,585 - INFO - Total files: 1
+2025-07-24 14:24:51,585 - INFO - Successful: 1
+2025-07-24 14:24:51,585 - INFO - Failed: 0
+2025-07-24 14:24:51,585 - INFO - Total elapsed time: 14.53 seconds (0.24 minutes)
+2025-07-24 14:24:51,585 - INFO - Average upload time per file: 14.41 seconds
+2025-07-24 14:24:51,585 - INFO - Throughput: 0.07 files/second
+2025-07-24 14:24:51,585 - INFO - Container: upload-tests
+2025-07-24 14:24:51,585 - INFO - ==================================================
+```
+- [5. Test small files batch upload](#5-test-small-files-batch-upload) ✅
+```
+==================================================
+2025-07-24 14:27:33,384 - INFO - Upload Summary:
+2025-07-24 14:27:33,384 - INFO - Total files: 400
+2025-07-24 14:27:33,384 - INFO - Successful: 400
+2025-07-24 14:27:33,384 - INFO - Failed: 0
+2025-07-24 14:27:33,384 - INFO - Total elapsed time: 96.56 seconds (1.61 minutes)
+2025-07-24 14:27:33,384 - INFO - Average upload time per file: 1.20 seconds
+2025-07-24 14:27:33,384 - INFO - Throughput: 4.14 files/second
+2025-07-24 14:27:33,384 - INFO - Container: upload-tests
+2025-07-24 14:27:33,384 - INFO - ==================================================
+```
+- [6. Test large files batch upload](#6-test-large-files-batch-upload) ✅
+```
+2025-07-24 15:21:35,140 - INFO - Upload interrupted by user
+```
+About 50 mins in, 105 files had been uploaded; total upload would be under 4 hours.
