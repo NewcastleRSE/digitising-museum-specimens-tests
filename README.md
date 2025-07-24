@@ -16,17 +16,47 @@ As part of the bid preparation for [Digitise UK natural science collections](htt
 
 Python
 
-## Getting Started
-
 ### Prerequisites
 
-Any tools or versions of languages needed to run code. For example, specific Python or Node versions. Minimum hardware requirements also go here.
+- [Python 3.12.13](https://www.python.org/downloads/release/python-3123/)
+- [pip 24.0](https://pypi.org/project/pip/24.0/)
+- `.env` file with `AZURE_STORAGE_CONNECTION_STRING`
+- `single_dummy_data_large` folder
+- `batch_dummy_data_large` folder
 
 ### Installation
 
-How to build or install the application.
+#### Create virtual environment
+`python3 -m venv /path/to/new/virtual/environment`
 
-### Running Locally
+#### Activate virtual environment
+- On Windows:
+`path\to\new\virtual\environment\Scripts\activate`
 
-How to run the application on your local system. Examples of this would include `venv`, `anaconda`, `node`, `Docker` or `minikube`. 
+- On Unix
+`source path\to\new\virtual\environment\bin\activate`
+
+#### Install dependencies
+
+`pip install -r requirements.txt`
+
+### Test programme
+
+#### 1. Test connection with Azure storage
+
+This test will attempt to programatically access the pre-configured Azure storage account; it will confirm that it can interact with the account by creating and deleting a storage container in the storage account.
+
+##### Run the test
+`python3 -m scripts/01-connection-test.py`
+
+##### Output
+Logs will be displayed on the console and saved to `logs/connection_test_*.log`
+
+##### Success
+The test will display a success message if it completes successfully. The successful completion of this test confirms that there are no impediments to access the Azure storage account either on the network or on the machine. The digitisation workflow should be able to upload the images automatically.
+
+##### Failure
+A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
+
+
 
