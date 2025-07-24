@@ -58,5 +58,21 @@ The test will display a success message if it completes successfully. The succes
 ##### Failure
 A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
 
+#### 2. Test single small file upload
+
+This test will attempt to programatically upload a single small file (~1MB) to the storage account container. It will confirm that there are no impediments to file upload on the machine or the network.
+
+##### Run the test
+`python3 ./scripts/02-file-upload.py --folder ./single_dummy_data_small/dummy_file_small.txt --container upload-tests`
+
+##### Output
+Logs will be displayed on the console and saved to `logs/file_upload_*.log`
+
+##### Success
+The test will display a success message if it completes successfully. The successful completion of this test confirms that there are no impediments to upload small files to the Azure storage account either on the network or on the machine. The digitisation workflow should be able to upload the images automatically.
+
+##### Failure
+A failed test means that the digitisation workflow might not be able to include an automated upload step from this machine or network. Upload might still be possible through the browser, or after changes to the network configuration or machine permissions. Recommendation is that the digitisation workflow includes a step where the digital files are physically transported to another location, before upload to cloud storage.
+
 
 
