@@ -8,7 +8,7 @@ This script tests connectivity to Azure Storage resources including:
 - Container listing (if permissions allow)
 
 Requirements:
-- pip install azure-storage-blob azure-identity
+- pip install azure-storage-blob azure-identity python-dotenv
 """
 
 import os
@@ -17,6 +17,18 @@ from datetime import datetime
 from azure.storage.blob import BlobServiceClient
 from azure.core.exceptions import AzureError, ClientAuthenticationError, ResourceNotFoundError
 import logging
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # This will load variables from .env file in current directory
+    print("✓ Loaded environment variables from .env file")
+except ImportError:
+    print("⚠ python-dotenv not installed. Install with: pip install python-dotenv")
+    print("⚠ Falling back to system environment variables only")
+except Exception as e:
+    print(f"⚠ Could not load .env file: {e}")
+    print("⚠ Falling back to system environment variables only")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -161,11 +173,12 @@ def main():
     
     # If no environment variables, prompt for connection string
     if not any([connection_string, (account_name and account_key), account_url]):
-        print("No Azure Storage credentials found in environment variables.")
-        print("\nPlease set one of the following:")
-        print("1. AZURE_STORAGE_CONNECTION_STRING")
-        print("2. AZURE_STORAGE_ACCOUNT_NAME + AZURE_STORAGE_ACCOUNT_KEY")
-        print("3. AZURE_STORAGE_ACCOUNT_URL (for managed identity)")
+        print("No Azure Storage credentials found in environment variables or .env file.")
+        print("\nPlease create a .env file in the current directory with one of the following:")
+        print("1. AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net")
+        print("2. AZURE_STORAGE_ACCOUNT_NAME=yourstorageaccount")
+        print("   AZURE_STORAGE_ACCOUNT_KEY=your-account-key")
+        print("3. AZURE_STORAGE_ACCOUNT_URL=https://yourstorageaccount.blob.core.windows.net")
         print("\nOr provide connection string now:")
         
         connection_string = input("Enter Azure Storage connection string (or press Enter to exit): ").strip()
