@@ -47,7 +47,7 @@ Python
 This test will attempt to programatically access the pre-configured Azure storage account; it will confirm that it can interact with the account by creating and deleting a storage container in the storage account.
 
 ##### Run the test
-`python3 -m scripts/01-connection-test.py`
+`python3 scripts/01-connection-test.py`
 
 ##### Output
 Logs will be displayed on the console and saved to `logs/connection_test_*.log`
