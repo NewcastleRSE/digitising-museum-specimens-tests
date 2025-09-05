@@ -1,0 +1,149 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0" version="28.1.2">
+  <diagram name="Page-1" id="AGcHwetUYm64FQP3PT1Z">
+    <mxGraphModel dx="1426" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yULOKuUlup_344uRE4ST-31" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="20" y="70" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-32" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="99.60000000000002" as="sourcePoint" />
+            <mxPoint x="150" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-33" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="170" y="60" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-34" value="Take photo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="220" y="85" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-35" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Phosphor_Fill_Vol_3-2937/hand-fill-1095.svg;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="180" y="67" width="23" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-36" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="99.60000000000002" as="sourcePoint" />
+            <mxPoint x="670" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-37" value="Picture ok?" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="440" y="61.5" width="154" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-38" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="99.60000000000002" as="sourcePoint" />
+            <mxPoint x="430" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-39" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="610" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-40" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="yULOKuUlup_344uRE4ST-37" target="yULOKuUlup_344uRE4ST-33" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="220" y="230" as="sourcePoint" />
+            <mxPoint x="260" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="517" y="220" />
+              <mxPoint x="250" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-41" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="500" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-42" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Phosphor_Fill_Vol_3-2937/hand-fill-1095.svg;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="507" y="65" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-43" value="&lt;b&gt;Imaging&lt;/b&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-44" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="319.6" as="sourcePoint" />
+            <mxPoint x="80" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-45" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="100" y="280" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-46" value="Crop / Image tweaks" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="150" y="305" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-47" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.gear;" parent="1" vertex="1">
+          <mxGeometry x="110" y="290" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-48" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="320" as="sourcePoint" />
+            <mxPoint x="360" y="320.4" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-49" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="20" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-50" value="Crops ok?" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="380" y="280" width="154" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-51" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Phosphor_Fill_Vol_3-2937/hand-fill-1095.svg;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="447" y="287" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-52" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="550" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-53" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="394" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-54" value="Manual crop / tweak" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="434" y="450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-55" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Phosphor_Fill_Vol_3-2937/hand-fill-1095.svg;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="407" y="437" width="23" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-56" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.454;entryY=-0.022;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=16;" parent="1" source="yULOKuUlup_344uRE4ST-50" target="yULOKuUlup_344uRE4ST-53" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="380" as="sourcePoint" />
+            <mxPoint x="459.0200000000002" y="427.89999999999986" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-57" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=16;" parent="1" source="yULOKuUlup_344uRE4ST-53" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="430" as="sourcePoint" />
+            <mxPoint x="707" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="707" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-58" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=90;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="440" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-59" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="548" y="319.6" as="sourcePoint" />
+            <mxPoint x="608" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-60" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="628" y="280" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-61" value="Image upload" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="678" y="305" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-62" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=16;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.gear;" parent="1" vertex="1">
+          <mxGeometry x="638" y="290" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-63" value="" style="endArrow=classic;html=1;rounded=0;fontSize=16;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="548.1" as="sourcePoint" />
+            <mxPoint x="80" y="548.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yULOKuUlup_344uRE4ST-64" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="110" y="512" width="73" height="73" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
